@@ -1,10 +1,11 @@
-name: kanapy2damask
+name: ms-data
 channels:
   - conda-forge
+  - nodefaults
 dependencies:
   # ---- Core ----
   - python>=3.10,<3.12
-  - numpy
+  - numpy<=2.26
   - pandas
   - scipy
   - h5py
@@ -15,6 +16,8 @@ dependencies:
   - seaborn
   - vtk
   - jupyterlab
+  - jupyter
+  - notebook
   - ipykernel
 
   # ---- Domain packages (from conda-forge) ----
@@ -22,10 +25,9 @@ dependencies:
   - orix
   - damask   # installs DAMASK (python package) from conda-forge
 
-  # ---- Install latest Kanapy from GitHub via pip ----
+  # ---- Install latest Kanapy and damask_python from GitHub/ICAMS via pip ----
   - pip
   - pip:
-      # Option A: track the default branch (latest)
-      - git+https://github.com/ICAMS/Kanapy.git#egg=kanapy
-      # Option B (recommended for reproducibility): pin to a commit or tag
-      # - git+https://github.com/ICAMS/Kanapy.git@<commit_or_tag>#egg=kanapy
+      - git+https://github.com/ICAMS/Kanapy.git
+      - git+https://github.com/ICAMS/damask_python.git
+
