@@ -19,33 +19,24 @@ Change to the repository folder and create the environment using the provided fi
 conda env create -f environment.yml
 ```
 
-> This environment installs:
+> This environment installs:  
 > - DAMASK (from **conda-forge**)  
 > - The **latest Kanapy** directly from GitHub  
+> - The **damask\_python module** from the GitHub/ICAMS fork with patches for interfacing with Kanapy  
 > - pyiron_workflow, orix, and all visualization tools  
 
 
 ## 3. Activate the environment
 
 ```bash
-$ conda activate kanapy2damask
+$ conda activate ms-data
 ```
 
 
-## 4. Install local DAMASK version
-
-
-```bash
-(kanapy2damask) $ cd damask_python
-(kanapy2damask) $ python -m pip install .
-(kanapy2damask) $ cd ..
-```
-
-
-## 5. Launch Jupyter
+## 4. Launch Jupyter
 
 ```bash
-(kanapy2damask) $ jupyter lab
+(ms-data) $ jupyter lab
 ```
 
 Open
@@ -54,7 +45,7 @@ Open
 ebsd2kanapy2damask.ipynb
 ```
 
-## 8. Run the notebook
+## 5. Run the notebook
 
 After completing the steps above, open the notebook in JupyterLab and execute the cells sequentially (1 → 8).
 
