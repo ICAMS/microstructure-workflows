@@ -1,0 +1,32 @@
+name: kanapy2damask
+channels:
+  - conda-forge
+dependencies:
+  # ---- Core ----
+  - python>=3.10,<3.12
+  - numpy
+  - pandas
+  - scipy
+  - h5py
+  - pyyaml
+
+  # ---- Visualization / Jupyter ----
+  - matplotlib
+  - seaborn
+  - vtk
+  - jupyterlab
+  - jupyter
+  - notebook
+  - ipykernel
+
+  # ---- Domain packages (from conda-forge) ----
+  - pyiron_workflow
+  - orix
+  - damask   # installs DAMASK (python package) from conda-forge
+
+  # ---- Install latest Kanapy from GitHub via pip ----
+  - pip
+  - pip:
+      - git+https://github.com/ICAMS/Kanapy.git#egg=kanapy
+      - git+https://github.com/ICAMS/DAMASK.git@main#subdirectory=python
+
