@@ -1,4 +1,0 @@
-[run]
-source = damask
-[report]
-show_missing = true
