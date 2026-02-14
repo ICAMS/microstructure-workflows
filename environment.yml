@@ -14,14 +14,11 @@ dependencies:
   # ---- Visualization / Jupyter ----
   - matplotlib
   - seaborn
-  - vtk
   - pyvista
   - trame
   - trame-vtk
   - trame-vuetify
   - jupyterlab
-  - jupyter
-  - notebook
   - ipykernel
 
   # ---- Domain packages (from conda-forge) ----
