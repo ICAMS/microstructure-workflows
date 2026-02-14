@@ -23,7 +23,7 @@ dependencies:
   - pympipool=0.9.1
   - executorlib=1.7.2
   - orix
-  - damask   # installs DAMASK (python package) from conda-forge
+  - damask   # installs DAMASK (python package) from conda-forge 
 
   # ---- Install latest Kanapy and damask_python from GitHub/ICAMS via pip ----
   - pip
