@@ -15,6 +15,9 @@ dependencies:
   - matplotlib
   - seaborn
   - pyvista
+  - mesa-libgl
+  - mesa-libosmesa
+  - libglvnd
   - jupyterlab
   - ipykernel
 
