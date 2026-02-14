@@ -4,7 +4,7 @@ channels:
   - nodefaults
 dependencies:
   # ---- Core ----
-  - python=3.10
+  - python=3.11.14
   - numpy<=2.26
   - pandas
   - scipy
@@ -19,9 +19,9 @@ dependencies:
   - ipykernel
 
   # ---- Domain packages (from conda-forge) ----
-  - pyiron_workflow
-  - pympipool
-  - executorlib=1.7.*
+  - pyiron_workflow=0.15.4
+  - pympipool=0.9.1
+  - executorlib=1.7.2
   - orix
   - damask   # installs DAMASK (python package) from conda-forge
 
