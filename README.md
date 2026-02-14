@@ -3,7 +3,7 @@
 
 This repository contains a complete workflow that connects **Kanapy** (microstructure generation) and **DAMASK** (FFT-based simulation). 
 
-This notebook is accessible via [mybinder.org](https://mybinder.org/v2/gh/ICAMS/microstructure-workflows.git/main?urlpath=%2Fdoc%2Ftree%2F)  
+This notebook is accessible via [mybinder.org](https://mybinder.org/v2/gh/ICAMS/microstructure-workflows.git/main?urlpath=%2Fdoc%2Ftree%2Febsd2kanapy2damask_new.ipynb)  
 
 
 To create a local copy on your hardware, follow the steps below.
