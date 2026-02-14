@@ -20,6 +20,7 @@ dependencies:
 
   # ---- Domain packages (from conda-forge) ----
   - pyiron_workflow
+  - executorlib <1.8
   - orix
   - damask   # installs DAMASK (python package) from conda-forge
 
