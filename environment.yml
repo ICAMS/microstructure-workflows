@@ -15,9 +15,6 @@ dependencies:
   - matplotlib
   - seaborn
   - pyvista
-  - trame
-  - trame-vtk
-  - trame-vuetify
   - jupyterlab
   - ipykernel
 
