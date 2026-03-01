@@ -1,7 +1,8 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ICAMS/microstructure-workflows.git/main?urlpath=%2Fdoc%2Ftree%2Febsd2kanapy2damask.ipynb)
 # kanapy2DAMASK — Jupyter Workflow Setup Guide
 
-This repository contains a complete workflow that connects **Kanapy** (microstructure generation) and **DAMASK** (FFT-based simulation). 
+This repository has been developed within the Infrastaructure Use Case ([IUC07](https://nfdi-matwerk.de/about/nfdi-matwerk-structure/use-cases/iuc07)) *Beyond 3D: Tools for tracking spatiotemporal microstructure evolution* within the [NFDI MatWerk](https://nfdi-matwerk.de) project.
+It contains a complete workflow that connects **Kanapy** (3D microstructure generation and analysis) and **DAMASK** (crystal plasticity with spectral solver (CPFFT)-based simulation of large deformations) to study the microstructure evolution during a simulated cold-rolling step of a synthetic polycrystal derived from an experimental EBSD map, see also Section 6. Background of the README file. 
 
 This notebook is accessible via [mybinder.org](https://mybinder.org/v2/gh/ICAMS/microstructure-workflows.git/main?urlpath=%2Fdoc%2Ftree%2Febsd2kanapy2damask_new.ipynb)  
 
@@ -64,3 +65,12 @@ The notebook will:
 6. Post-process the results (plots + VTK export).
 
 
+## 6. Background
+A central challenge in microstructure modeling is that different simulation tools store and represent data in incompatible formats. This fragmentation makes it difficult to build end-to-end workflows where the output of one tool becomes the input of another. The problem becomes even more pronounced when tracking microstructure evolution, since most tools only record their own internal state and lack a common structure for storing time-dependent changes in grains, phases, and voxel fields.
+
+### Integrated tools used in this notebook
+
+[**Kanapy:**](https://icams.github.io/Kanapy/builds/html/index.html) generates synthetic 3D microstructures and performs statistical analysis  
+[**DAMASK:**](https://damask-multiphysics.org) performs mechanical simulations based on FFT solver with crystal-plasticity model  
+[**Pyiron_workflow:**](https://pyiron.org) constructs workflows as computational graphs
+This notebook demonstrates how to construct and execute a complete microstructure-to-simulation workflow. 
