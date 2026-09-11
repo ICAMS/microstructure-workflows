@@ -1,4 +1,4 @@
-name: ms-data
+name: mimedat
 channels:
   - conda-forge
   - nodefaults
@@ -15,19 +15,29 @@ dependencies:
   - matplotlib
   - seaborn
   - pyvista
+  - plotly
+  - ipywidgets
   - jupyterlab
   - ipykernel
+
+  # ---- Used by functions/ (grain segmentation, viewer, progress bars) ----
+  - networkx
+  - scikit-learn
+  - tqdm
+  - packaging
 
   # ---- Domain packages (from conda-forge) ----
   - pyiron_workflow=0.15.4
   - pympipool=0.9.1
   - executorlib=1.7.2
   - orix
-  - damask   # installs DAMASK (python package) from conda-forge 
+  - damask   # installs DAMASK (python package + DAMASK_grid solver) from conda-forge
 
   # ---- Install latest Kanapy and damask_python from GitHub/ICAMS via pip ----
+  # damask_python overrides the conda-forge damask *python module* with the ICAMS
+  # fork that carries the MiMeDO interface (load_MiMedat, from_mechanical_bc,
+  # Result.export_mimedo); the conda-forge package is still needed for DAMASK_grid.
   - pip
   - pip:
       - git+https://github.com/ICAMS/Kanapy.git
       - git+https://github.com/ICAMS/damask_python.git
-

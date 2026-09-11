@@ -105,3 +105,10 @@ libs/
 *.yaml
 *.log
 
+
+# Workflow run folders (generated inputs + results, GBs) and stray files
+cases/*/Keys/
+Keys/
+pyiron.log
+*:Zone.Identifier
+.idea/
